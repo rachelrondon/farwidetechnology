@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <!-- Materialize -->
-  <link rel="stylesheet" href="libraries/materialize/css/materialize.min.css" />
+  <!-- <link rel="stylesheet" href="libraries/materialize/css/materialize.min.css" /> -->
 
   <script type="text/javascript"
   src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -20,35 +20,26 @@
 </head>
 
 <body>
-  <main>
-    <div id="search-results"></div>
-    <div id="info-modal"></div>
-  </main>
-
-<!-- Handlebar Templates -->
-<script id="search-results-template" type="text/x-handlebars-template">
-  <!-- {{#each Search}} -->
-  <!-- <div class="result-item"> -->
-    <!-- <h2>{{State}}</h2> -->
-  <!-- </div> -->
-  <!-- {{/each}} -->
-</script>
-
-<script id="more-info-modal" type="text/x-handlebars-template">
-  <div class="rectangle-2">
-    {{#each Search}}
-      <div class="mask">
-        <p>
-        {{State}}
-        {{Type}}
-        {{County}}
-        {{Animal}}
-        {{Season}}
-        {{Dates}}
-        </p>
-      </div>
-    {{/each}}
-    </div>
-</script>
+  <div id="main-body"></div>
+  <div id="info-modal">
+    <script id="more-info-modal" type="text/x-handlebars-template">
+      <div class="rectangle-2">
+        <div class="showing-117-results"></div>
+        <div class="rectangle-6"></div>
+        {{#each Search}}
+          <div class="mask">
+            <p>
+            {{State}}
+            {{Type}}
+            {{County}}
+            {{Animal}}
+            {{Season}}
+            {{Dates}}
+            </p>
+          </div>
+        {{/each}}
+        </div>
+    </script>
+  </div>
 </body>
 </html>

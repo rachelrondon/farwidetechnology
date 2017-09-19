@@ -2,10 +2,7 @@
 
 $(document).ready(() => {
 
-const searchResults = $('#search-results-template').html();
 const moreInfo = $('#more-info-modal').html();
-
-const searchTemplate = Handlebars.compile(searchResults);
 const modalTemplate = Handlebars.compile(moreInfo);
 
 const dummyData = {
