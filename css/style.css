@@ -1,19 +1,13 @@
 body {
-  height: 1154px;
-  width: 1280px;
+  width: 100%;
+  height: 100%;
+  background-color: #2B2B2B;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: row-reverse;
+  justify-content: left;
   margin: 0;
   padding: 0;
 }
-
-#main-body {
-  width:960px;
-  height: 1154px;
-  background-color: #2B2B2B;
-}
-
 
 /* This is the side-bar */
 .rectangle-2 {
@@ -49,6 +43,7 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
+  white-space: nowrap;
 }
 /* This is the end of the card for each result */
 
@@ -61,4 +56,67 @@ body {
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 24px;
+}
+
+.path-16 {
+  box-sizing: border-box;
+  height: 2px;
+  width: 297.78px;
+  border: 1px solid #4C4C4C;
+}
+
+.fall-creek {
+  height: 24px;
+  width: 118px;
+  color: #FFFFFF;
+  font-family: 'PT Sans Narrow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 24px;
+  overflow: unset;
+}
+
+.missouri-hunting {
+	height: 11px;
+	width: 106px;
+	color: #949494;
+	font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	font-size: 10px;
+	line-height: 11px;
+}
+
+.deer {
+  height: 24px;
+  width: 39px;
+  color: #949494;
+  font-family: 'PT Sans Narrow', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.archery-season {
+	height: 12px;
+	width: 78px;
+	color: #0DFF8B;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 12px;
+	text-align: center;
+}
+
+.sep-01-sep-14-oc {
+	height: 12px;
+	width: 180px;
+	color: #FFFFFF;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	font-size: 10px;
+	line-height: 12px;
+	text-align: center;
 }

@@ -16,11 +16,11 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Work+Sans" rel="stylesheet">
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
-  <div id="main-body"></div>
   <div id="info-modal">
     <script id="more-info-modal" type="text/x-handlebars-template">
       <div class="rectangle-2">
@@ -28,14 +28,12 @@
         <div class="rectangle-6"></div>
         {{#each Search}}
           <div class="mask">
-            <p>
-            {{State}}
-            {{Type}}
-            {{County}}
-            {{Animal}}
-            {{Season}}
-            {{Dates}}
-            </p>
+            <h1 class="missouri-hunting">{{Type}}</h1>
+            <h1 class="fall-creek">{{County}}</h1>
+            <h1 class="deer">{{Animal}}</h1>
+            <div class="path-16"></div>
+            <h1 class="archery-season">{{Season}}</h1>
+            <h1 class="sep-01-sep-14-oc">{{Dates}}</h1>
           </div>
         {{/each}}
         </div>
