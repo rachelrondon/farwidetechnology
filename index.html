@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
 
+  <!-- Materialize -->
+  <link rel="stylesheet" href="libraries/materialize/css/materialize.min.css" />
+
   <script type="text/javascript"
   src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
@@ -22,30 +25,30 @@
     <div id="info-modal"></div>
   </main>
 
-
 <!-- Handlebar Templates -->
 <script id="search-results-template" type="text/x-handlebars-template">
-  {{#each Search}}
-  <div class="result-item">
-    <h2>{{State}}</h2>
-  </div>
-  {{/each}}
+  <!-- {{#each Search}} -->
+  <!-- <div class="result-item"> -->
+    <!-- <h2>{{State}}</h2> -->
+  <!-- </div> -->
+  <!-- {{/each}} -->
 </script>
 
 <script id="more-info-modal" type="text/x-handlebars-template">
-  <div id="info">
+  <div class="rectangle-2">
     {{#each Search}}
-    <h2>{{State}}</h2>
-    <p>
-      State: {{State}}<br>
-      Type: {{Hunting}}<br>
-      County: {{County}}<br>
-      Animal: {{Animal}}<br>
-      Season: {{Season}}<br>
-      Dates: {{Dates}}<br>
-    </p>
+      <div class="mask">
+        <p>
+        {{State}}
+        {{Type}}
+        {{County}}
+        {{Animal}}
+        {{Season}}
+        {{Dates}}
+        </p>
+      </div>
     {{/each}}
-  </div>
+    </div>
 </script>
 </body>
 </html>
