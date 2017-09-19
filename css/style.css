@@ -32,6 +32,7 @@ body {
   margin: 10px;
   background-color: #2B2B2B;
   white-space: nowrap;
+  z-index: 1;
   /*position: relative;
   display: inline-block;*/
 }
@@ -305,6 +306,7 @@ a {
   margin-top: 13px;
   margin-bottom: 13px;
   margin-right: 153px;
+  z-index: 2;
 }
 
 #dropdown-options {
@@ -330,6 +332,8 @@ a {
 
 #arrow-down {
   position: absolute;
-  margin-top: 13px;
-  margin: 120.5px;
+  padding-left: 120.5px;
+  height: 12.67px;
+  width: 12.67px;
+  z-index: 3;
 }
