@@ -1,3 +1,4 @@
+
 'use strict';
 
 $(document).ready(() => {
@@ -62,5 +63,22 @@ $('#info-modal').html(context);
 $('#info-modal').css('visibility', 'visible');
 
 
-// closing brackets
+/* Click event to change the border color */
+  $('.mask').click(function() {
+    if($('.mask_active').length) {
+      $('.mask_active').not($(this)).removeClass('mask_active').addClass('mask');
+    }
+    $(this).removeClass('mask').addClass('mask_active');
+  })
+
+/* dropdown menu */
+$('.dropdown-toggle').click(function() {
+  $(this).next('.dropdown').toggle();
+});
+
+
+
+
+
+
 });

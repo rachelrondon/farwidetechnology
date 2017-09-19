@@ -24,11 +24,25 @@ body {
 
 /* This is the drop-down */
 .rectangle-6 {
+  display: flex;
+  flex-direction: row;
   height: 40px;
   width: 300px;
   border-radius: 4px;
   margin: 10px;
   background-color: #2B2B2B;
+  white-space: nowrap;
+  /*position: relative;
+  display: inline-block;*/
+}
+
+.rectangle-dropdown {
+  position: absolute;
+  height: 40px;
+  width: 300px;
+  border-radius: 4px;
+  background-color: #2B2B2B;
+  white-space: nowrap;
 }
 /* This is the end of the drop-down */
 
@@ -36,7 +50,7 @@ body {
 .mask {
   height: 164px;
   width: 300px;
-  /*border-style: solid;*/
+  border-style: solid;
   border-width: 1px;
   border-radius: 4px;
   background-color: #2B2B2B;
@@ -247,4 +261,75 @@ body {
   width: 8.02px;
   margin-left: 271.99px;
   margin-top: 25.06px;
+}
+
+
+.mask_active{
+  border-color: #0DFF8B;
+  height: 164px;
+  width: 300px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: #2B2B2B;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#area-size-ascending {
+	height: 14px;
+	width: 129px;
+	color: #FFFFFF;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+  margin-left: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  margin-right: 153px;
+}
+
+#dropdown-options {
+  color: #FFFFFF;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  margin-left: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  margin-right: 153px;
+  border-radius: 4px;
+  background-color: #2B2B2B;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+#arrow-down {
+  position: absolute;
+  margin-top: 13px;
+  margin: 120.5px;
 }
