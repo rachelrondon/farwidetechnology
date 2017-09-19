@@ -62,7 +62,23 @@ body {
   box-sizing: border-box;
   height: 2px;
   width: 297.78px;
-  border: 1px solid #4C4C4C;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4C4C4C;
+  margin-top: 18.73px;
+}
+
+.missouri-hunting {
+	height: 11px;
+	width: 106px;
+	color: #949494;
+	font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	font-size: 10px;
+	line-height: 11px;
+  padding-left: 18px;
+  padding-top: 18px;
+  margin-bottom: inherit;
 }
 
 .fall-creek {
@@ -76,17 +92,11 @@ body {
   letter-spacing: 1px;
   line-height: 24px;
   overflow: unset;
+  padding-left: 18px;
+  margin-top: 3px;
+  margin-bottom: auto;
 }
 
-.missouri-hunting {
-	height: 11px;
-	width: 106px;
-	color: #949494;
-	font-family: 'Work Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-	font-size: 10px;
-	line-height: 11px;
-}
 
 .deer {
   height: 24px;
@@ -96,6 +106,10 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 24px;
   line-height: 24px;
+  padding-left: 18px;
+  /*margin-bottom: auto;*/
+  margin-top: auto;
+  /*margin-bottom: inherit;*/
 }
 
 .archery-season {
@@ -108,6 +122,9 @@ body {
 	font-weight: 600;
 	line-height: 12px;
 	text-align: center;
+  padding-left: 111px;
+  padding-right: 111px;
+  margin-top: 10.27px;
 }
 
 .sep-01-sep-14-oc {
@@ -119,4 +136,28 @@ body {
 	font-size: 10px;
 	line-height: 12px;
 	text-align: center;
+  padding-left: 60.5px;
+  padding-right: 59.5px;
+  margin-top: 5px;
+}
+
+.oval-1 {
+  height: 5px;
+  width: 5px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  margin-left: 123px;
+
+}
+.oval-6 {
+  height: 5px;
+  width: 5px;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+#ovals {
+  display: flex;
+  flex-direction: row;
 }
