@@ -36,7 +36,7 @@ body {
 .mask {
   height: 164px;
   width: 300px;
-  border-style: solid;
+  /*border-style: solid;*/
   border-width: 1px;
   border-radius: 4px;
   background-color: #2B2B2B;
@@ -45,6 +45,7 @@ body {
   margin-top: 10px;
   white-space: nowrap;
 }
+
 /* This is the end of the card for each result */
 
 
@@ -61,10 +62,11 @@ body {
 .path-16 {
   box-sizing: border-box;
   height: 2px;
-  width: 297.78px;
+  width: 300px;
   border-width: 1px;
   border-style: solid;
   border-color: #4C4C4C;
+  margin-top: 0px;
 }
 
 /*.path-16 {
@@ -180,4 +182,49 @@ body {
   margin-top: 28px;
   margin-left: 26px;
   margin-top: auto;
+  height: 70px;
+  width: 140px;
+  z-index:2;
+}
+
+#icon-favorite-unselected {
+  margin-left: 120px;
+  margin-top: auto;
+  padding-right: 20px;
+  z-index: auto;
+}
+
+#card-top-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+#unselected-icon-div {
+  margin-top: 20px;
+}
+
+.main-icons {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+#icon-green {
+  margin-top: 28px;
+  margin-left: 26px;
+  height: 70px;
+  width: 140px;
+  z-index:2;
+}
+
+.page-1-copy-2 {
+  position: absolute;
+  height: 17.2px;
+  width: 18px;
+  z-index: 3;
+  margin-top: auto;
+  padding-left: 129px;
+  padding-top: 20px;
+  padding-right: 17px;
 }
