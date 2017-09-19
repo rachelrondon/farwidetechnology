@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="137px" height="70px" viewBox="0 0 137 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>FW_2.2_Icon_Green</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="139 70 139 0 0 0 0 70"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Preview/AreaCard/List/Hunting_v2Selected" transform="translate(-162.000000, -28.000000)">
+            <g id="FW_2.2_Icon_Green" transform="translate(160.000000, 28.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M104.668151,23.855987 L121.058016,40.1991062 L142,40.1991062 L101.685579,0 L72.00028,29.6000128 L42.3145613,0 L2,40.1991062 L22.9425438,40.1991062 L39.3322693,23.855987 L45.2968532,23.855987 L91.5743183,70 L112.516862,70 L82.4714819,40.0413608 L98.7035668,23.855987 L104.668151,23.855987 Z M31.4838379,70 L52.4261017,70 L66.7373789,55.7299064 L56.2663171,45.2888376 L31.4838379,70 L31.4838379,70 Z" id="Fill-1" fill="#313131" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

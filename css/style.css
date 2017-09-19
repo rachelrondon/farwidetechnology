@@ -65,8 +65,17 @@ body {
   border-width: 1px;
   border-style: solid;
   border-color: #4C4C4C;
-  margin-top: 18.73px;
 }
+
+/*.path-16 {
+  box-sizing: border-box;
+  height: 2px;
+  width: 297.78px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4C4C4C;
+  margin-top: 0;
+}*/
 
 .missouri-hunting {
 	height: 11px;
@@ -160,4 +169,15 @@ body {
 #ovals {
   display: flex;
   flex-direction: row;
+}
+
+#card-top {
+  display: flex;
+  flex-direction: row;
+}
+
+#icon-green {
+  margin-top: 28px;
+  margin-left: 26px;
+  margin-top: auto;
 }
