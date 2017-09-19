@@ -53,10 +53,14 @@ body {
 	height: 24px;
 	width: 179px;
 	color: #FFFFFF;
-	font-family: "Work Sans";
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 24px;
+  margin-left: 10px;
+  margin-right: 131px;
+  padding-top: 15px;
 }
 
 .path-16 {
@@ -227,4 +231,20 @@ body {
   padding-left: 129px;
   padding-top: 20px;
   padding-right: 17px;
+}
+
+.arrow-back-material {
+  position: absolute;
+  margin-top: 25.06px;
+  margin-left: 19.99px;
+	height: 8.02px;
+	width: 8.02px;
+}
+
+.arrow-forward-material {
+  position: absolute;
+  height: 8.02px;
+  width: 8.02px;
+  margin-left: 271.99px;
+  margin-top: 25.06px;
 }
