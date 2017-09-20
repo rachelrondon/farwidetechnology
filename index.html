@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Rachel Rondon</title>
 
-  <!-- Application Styles -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Materialize -->
-  <!-- <link rel="stylesheet" href="libraries/materialize/css/materialize.min.css" /> -->
-
-  <script type="text/javascript"
-  src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|Work+Sans" rel="stylesheet">
-<script type="text/javascript" src="js/main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow|Work+Sans" rel="stylesheet">
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body class="body">
@@ -26,58 +22,59 @@
       <div class="rectangle-2">
         <div class="showing-117-results">Showing 117 Results</div>
         <div class="rectangle-6">
-            <a class="dropdown-toggle" id="area-size-ascending">Area Size (Ascending)<img id="arrow-down" src="Assets/icon/arrow-down.greyMedium.svg"></img></a>
+          <a class="dropdown-toggle" id="area-size-ascending">Area Size (Ascending)<img id="arrow-down" src="Assets/icon/arrow-down.greyMedium.svg"></img></a>
           <ul class="dropdown">
-                <div class="dropdown-item">
-                  <li class="dropdown-li"><a id="dropdown-options" href="">Area Size (Ascending)<img id="arrow-up" src="Assets/icon/arrow-down.greyMedium.svg"></img></a></li>
-                </div>
-                <div class="path-dropdown"></div>
-                <div class="dropdown-item">
-                  <li class="dropdown-li"><a id="dropdown-options" href="">Area Size (Descending)</a></li>
-                </div>
-                <div class="path-dropdown"></div>
-                <div class="dropdown-item">
-                  <li class="dropdown-li"><a id="dropdown-options" href="">Area Name (A to Z)</a></li>
-                </div>
-                <div class="path-dropdown"></div>
-                <div class="dropdown-item">
-                  <li class="dropdown-li"><a id="dropdown-options" href="">Season (Soonest First)</a></li>
-                </div>
+            <div class="dropdown-item">
+              <li class="dropdown-li"><a id="dropdown-options" href="">Area Size (Ascending)<img id="arrow-up" src="Assets/icon/arrow-down.greyMedium.svg"></img></a></li>
+            </div>
+            <div class="path-dropdown"></div>
+            <div class="dropdown-item">
+              <li class="dropdown-li"><a id="dropdown-options" href="">Area Size (Descending)</a></li>
+            </div>
+            <div class="path-dropdown"></div>
+            <div class="dropdown-item">
+              <li class="dropdown-li"><a id="dropdown-options" href="">Area Name (A to Z)</a></li>
+            </div>
+            <div class="path-dropdown"></div>
+            <div class="dropdown-item">
+              <li class="dropdown-li"><a id="dropdown-options" href="">Season (Soonest First)</a></li>
+            </div>
           </ul>
         </div>
 
         {{#each Search}}
-          <div id="mask-div" class="mask">
+        <div id="mask-div" class="mask">
 
-            <div id="card-top">
-              <div id="card-top-content">
-                <h1 class="missouri-hunting">{{Type}}</h1>
-                <h1 class="fall-creek">{{County}}</h1>
-                <h1 class="deer">{{Animal}}</h1>
-              </div>
-              <div class="main-icons">
-                <img class="page-1-copy-2" src="Assets/icon/icon-favorite-unselected.svg"></img>
-                <img id="icon-green" src="Assets/FW_2.2_Icon_Green 2.svg"></img>
-              </div>
+          <div id="card-top">
+            <div id="card-top-content">
+              <h1 class="missouri-hunting">{{Type}}</h1>
+              <h1 class="fall-creek">{{County}}</h1>
+              <h1 class="deer">{{Animal}}</h1>
             </div>
-            <div class="path-16"></div>
-            <a href="#"><img id={{@index}} class="arrow-back-material" src="Assets/arrow_back.svg"></img></a>
-            <a href="#"><img id={{@index}} class="arrow-forward-material" src="Assets/arrow_forward.svg"></img></a>
-            <h1 class="archery-season">{{Name}}</h1>
-            <h1 class="sep-01-sep-14-oc">Sep 01 - Sep 14 | Oct 02 - Nov 16</h1>
-            <div id="ovals">
-              <div class="oval-1"></div>
-              <div class="oval-6"></div>
-              <div class="oval-6"></div>
-              <div class="oval-6"></div>
-              <div class="oval-6"></div>
-              <div class="oval-6"></div>
+            <div class="main-icons">
+              <img class="page-1-copy-2" src="Assets/icon/icon-favorite-unselected.svg"></img>
+              <img id="icon-green" src="Assets/FW_2.2_Icon_Green 2.svg"></img>
+            </div>
+          </div>
+          <div class="path-16"></div>
+          <a href="#"><img id={{@index}} class="arrow-back-material" src="Assets/arrow_back.svg"></img></a>
+          <a href="#"><img id={{@index}} class="arrow-forward-material" src="Assets/arrow_forward.svg"></img></a>
+          <h1 class="archery-season"></h1>
+          <h1 class="sep-01-sep-14-oc"></h1>
+          <div id="ovals">
+            <div class="oval-1"></div>
+            <div class="oval-6"></div>
+            <div class="oval-6"></div>
+            <div class="oval-6"></div>
+            <div class="oval-6"></div>
+            <div class="oval-6"></div>
           </div>
 
-          </div>
-        {{/each}}
         </div>
+        {{/each}}
+      </div>
     </script>
   </div>
 </body>
+
 </html>
