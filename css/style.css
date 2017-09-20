@@ -33,6 +33,9 @@ body {
   background-color: #2B2B2B;
   white-space: nowrap;
   z-index: 1;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
   /*position: relative;
   display: inline-block;*/
 }
@@ -59,10 +62,14 @@ body {
   margin-right: 10px;
   margin-top: 10px;
   white-space: nowrap;
+  z-index: 3;
 }
 
 /* This is the end of the card for each result */
-
+ul {
+margin: 0;
+ padding: 0;
+}
 
 .showing-117-results {
 	height: 24px;
@@ -86,6 +93,18 @@ body {
   border-style: solid;
   border-color: #4C4C4C;
   margin-top: 0px;
+}
+
+.path-dropdown {
+  position: absolute;
+  box-sizing: border-box;
+  height: 1px;
+  width: 300px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4C4C4C;
+  margin-top: 0px;
+  /*margin-left: 18px;*/
 }
 
 /*.path-16 {
@@ -279,11 +298,49 @@ body {
   white-space: nowrap;
 }
 
+.dropdown-toggle {
+  position: fixed;
+}
 
 .dropdown {
   display: none;
+  /*padding-top: 10px;*/
   position: absolute;
+  width: 300px;
+  height: 160px;
+  background-color: #2B2B2B;
+  z-index: 4;
+  margin-top: auto;
+  margin: 0;
+  /*border-style: solid;*/
+  /*border-width: 1px;*/
+  border-radius: 4px;
 }
+
+.dropdown-item {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+    background-color: #2B2B2B;
+
+  /*margin: 10px;*/
+}
+
+/*#area-size-ascending {
+	height: 14px;
+	width: 129px;
+	color: #FFFFFF;
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+  margin-left: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  margin-right: 153px;
+  z-index: 2;
+}*/
 
 li {
   list-style-type: none;
@@ -294,6 +351,7 @@ a {
 }
 
 #area-size-ascending {
+  position: absolute;
 	height: 14px;
 	width: 129px;
 	color: #FFFFFF;
@@ -310,22 +368,21 @@ a {
 }
 
 #dropdown-options {
+  position: absolute;
   color: #FFFFFF;
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 12px;
   font-weight: 600;
   line-height: 14px;
-  margin-left: 18px;
-  margin-top: 13px;
+  margin-top: 12px;
   margin-bottom: 13px;
-  margin-right: 153px;
-  border-radius: 4px;
   background-color: #2B2B2B;
+  margin-left: 18px;
 }
 
 .dropdown-menu {
-  display: flex;
+  position: absolute;
   flex-direction: row;
   white-space: nowrap;
 }
@@ -336,4 +393,26 @@ a {
   height: 12.67px;
   width: 12.67px;
   z-index: 3;
+}
+
+#arrow-up {
+  padding-right: 120.5px;
+  position: absolute;
+  height: 12.67px;
+  width: 12.67px;
+  -webkit-transform: rotate(180deg)
+}
+
+.dropdown-li {
+  margin-right: 10px;
+}
+
+#the-dropdown-menu {
+position: absolute;
+height: 40px;
+width: 300px;
+border-radius: 4px;
+background-color: #2B2B2B;
+opacity: 100%;
+z-index: 2;
 }

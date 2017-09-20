@@ -25,18 +25,25 @@
     <script id="more-info-modal" type="text/x-handlebars-template">
       <div class="rectangle-2">
         <div class="showing-117-results">Showing 117 Results</div>
-
         <div class="rectangle-6">
-          <!-- <img id="arrow-down" src="Assets/icon/arrow-down.greyMedium.svg"></img> -->
             <a class="dropdown-toggle" id="area-size-ascending">Area Size (Ascending)<img id="arrow-down" src="Assets/icon/arrow-down.greyMedium.svg"></img></a>
-
           <ul class="dropdown">
-              <li><a id="dropdown-options" href="">Area Size (Ascending)</a></li>
-              <li><a id="dropdown-options" href="">Area Size (Descending)</a></li>
-              <li><a id="dropdown-options" href="">Area Name (A to Z)</a></li>
-              <li><a id="dropdown-options" href="">Season (Soonest First)</a></li>
+                <div class="dropdown-item">
+                  <li class="dropdown-li"><a id="dropdown-options" href="">Area Size (Ascending)<img id="arrow-up" src="Assets/icon/arrow-down.greyMedium.svg"></img></a></li>
+                </div>
+                <div class="path-dropdown"></div>
+                <div class="dropdown-item">
+                  <li class="dropdown-li"><a id="dropdown-options" href="">Area Size (Descending)</a></li>
+                </div>
+                <div class="path-dropdown"></div>
+                <div class="dropdown-item">
+                  <li class="dropdown-li"><a id="dropdown-options" href="">Area Name (A to Z)</a></li>
+                </div>
+                <div class="path-dropdown"></div>
+                <div class="dropdown-item">
+                  <li class="dropdown-li"><a id="dropdown-options" href="">Season (Soonest First)</a></li>
+                </div>
           </ul>
-
         </div>
 
         {{#each Search}}

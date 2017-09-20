@@ -57,6 +57,33 @@ const dummyData = {
   ]
 };
 
+const dropdownData = {
+  Dropdown: [
+    {
+      Title: 'Area Size (Ascending)'
+    },
+    {
+      Title: 'Area Size (Descending)'
+    },
+    {
+      Title: 'Area Name (A to Z)'
+    },
+    {
+      Title: 'Season (Soonest First)'
+    }
+  ]
+};
+
+// const moreInfo = $('#more-info-modal').html();
+// const modalTemplate = Handlebars.compile(moreInfo);
+
+// const dropdownInfo = $('#dropdown-info-modal').html();
+// const modalTemplate = Handlebars.compile(dropdownInfo);
+
+const dropdownContext = modalTemplate(dropdownData);
+$('dropdown-modal').html(dropdownContext);
+$('dropdown-modal').css('visibility', 'visible');
+
 
 const context = modalTemplate(dummyData);
 $('#info-modal').html(context);
