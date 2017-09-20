@@ -96,8 +96,6 @@ $(".arrow-forward-material").on('click', function(event){
   const id = event.target.id;
 
   const card = event.target.parentElement.parentElement;
-  // console.log($(card).find('.archery-season'));
-  // console.log($(card).find('.sep-01-sep-14-oc'));
 
   const theSeason = $(card).find('.archery-season')[0];
   const theDate = $(card).find('.sep-01-sep-14-oc')[0];
