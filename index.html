@@ -20,7 +20,7 @@
 <script type="text/javascript" src="js/main.js"></script>
 </head>
 
-<body>
+<body class="body">
   <div id="info-modal">
     <script id="more-info-modal" type="text/x-handlebars-template">
       <div class="rectangle-2">
@@ -47,7 +47,7 @@
         </div>
 
         {{#each Search}}
-          <div class="mask">
+          <div id="mask-div" class="mask">
 
             <div id="card-top">
               <div id="card-top-content">
@@ -61,10 +61,10 @@
               </div>
             </div>
             <div class="path-16"></div>
-            <a href="#"><img class="arrow-back-material" src="Assets/arrow_back.svg"></img></a>
-            <a href="#"><img class="arrow-forward-material" src="Assets/arrow_forward.svg"></img></a>
-            <h1 class="archery-season"></h1>
-            <h1 class="sep-01-sep-14-oc"></h1>
+            <a href="#"><img id={{@index}} class="arrow-back-material" src="Assets/arrow_back.svg"></img></a>
+            <a href="#"><img id={{@index}} class="arrow-forward-material" src="Assets/arrow_forward.svg"></img></a>
+            <h1 class="archery-season">{{Name}}</h1>
+            <h1 class="sep-01-sep-14-oc">Sep 01 - Sep 14 | Oct 02 - Nov 16</h1>
             <div id="ovals">
               <div class="oval-1"></div>
               <div class="oval-6"></div>

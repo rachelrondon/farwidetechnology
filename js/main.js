@@ -1,4 +1,3 @@
-
 'use strict';
 
 $(document).ready(() => {
@@ -12,37 +11,43 @@ const dummyData = {
       State: 'MISSOURI',
       Type: 'HUNTING',
       County: 'Knox County',
-      Animal: 'Deer'
+      Animal: 'Deer',
+      Count: 0
     },
     {
       State: 'MISSOURI',
       Type: 'HUNTING',
       County: 'Moniteau County',
-      Animal: 'Deer'
+      Animal: 'Deer',
+      Count: 0
     },
     {
       State: 'MISSOURI',
       Type: 'HUNTING',
       County: 'Miller County',
-      Animal: 'Deer'
+      Animal: 'Deer',
+      Count: 0
     },
     {
     State: 'MISSOURI',
     Type: 'HUNTING',
     County: 'Cole County',
-    Animal: 'Deer'
+    Animal: 'Deer',
+    Count: 0
   },
     {
       State: 'MISSOURI',
       Type: 'HUNTING',
       County: 'Adair County',
-      Animal: 'Deer'
+      Animal: 'Deer',
+      Count: 0
     },
     {
       State: 'MISSOURI',
       Type: 'HUNTING',
       County: 'York County',
-      Animal: 'Deer'
+      Animal: 'Deer',
+      Count: 0
     }
   ],
 
@@ -86,29 +91,45 @@ let seasonsArray = [
 $('.archery-season').html(seasonsArray[0].name);
 $('.sep-01-sep-14-oc').html(seasonsArray[0].date);
 
-let count = 0;
+// let count = 0;
 
 
-$(".arrow-forward-material").on('click', function(){
-    count += 1;
+$(".arrow-forward-material").on('click', function(event){
+  console.log(event.target);
 
-    for (var i = 0; i < count; i++) {
-      for (let j = 0; j < seasonsArray.length; j++) {
-      $('.archery-season').html(seasonsArray[i].name);
-      $('.sep-01-sep-14-oc').html(seasonsArray[i].date);
+  const id = event.target.id;
 
-      }
-    }
+  const card = event.target.parentElement.parentElement;
+  console.log($(card).find('.archery-season'));
+  console.log($(card).find('.sep-01-sep-14-oc'));
+
+  const theSeason = $(card).find('.archery-season')[0];
+  const theDate = $(card).find('.sep-01-sep-14-oc')[0];
+
+    // count += 1;
+    // dummyData.Search[id].Count += 1;
+    // below = math.min(below + 1, below.length)
+    const newCount = ++dummyData.Search[id].Count;
+
+    // for (var i = 0; i < count; i++) {
+      // for (let j = 0; j < seasonsArray.length; j++) {
+      $(theSeason).html(seasonsArray[newCount].name);
+      $(theDate).html(seasonsArray[newCount].date);
+
+      // }
+    // }
 });
 
 
 $(".arrow-back-material").on('click', function(){
     count -= 1;
 
-    for (var i = 0; i < count; i++) {
-      for (let j = 0; j < seasonsArray.length; j++) {
-      $('.archery-season').html(seasonsArray[i].name);
-      $('.sep-01-sep-14-oc').html(seasonsArray[i].date);
+    if ($('#mask-div').is('.mask_active')) {
+      for (var i = 0; i < count; i++) {
+        for (let j = 0; j < seasonsArray.length; j++) {
+        $('.archery-season').html(seasonsArray[i].name);
+        $('.sep-01-sep-14-oc').html(seasonsArray[i].date);
+        }
       }
     }
 });
@@ -116,4 +137,46 @@ $(".arrow-back-material").on('click', function(){
 
 
 
+// $('.mask_active').each(function() {
+//   if ($('.mask_active').length > 0) {
+//
+//   }
+// })
+
 });
+
+
+
+// $('.mask').focus(function() {
+
+  //   $(".arrow-forward-material").on('click', function(){
+  //       count += 1;
+  //
+  //       for (var i = 0; i < count; i++) {
+  //         for (let j = 0; j < seasonsArray.length; j++) {
+  //           $('.mask').siblings('h1.archery-season:first').html(seasonsArray[i].name);
+  //           $('.mask').siblings('h1.sep-01-sep-14-oc:first').html(seasonsArray[i].date);
+  //         }
+  //       }
+  //   });
+  // // });
+  //
+  //
+  // // $('.mask').focus(function() {
+  //
+  //   $(".arrow-back-material").on('click', function(){
+  //       count -= 1;
+  //
+  //       for (var i = 0; i < count; i++) {
+  //         for (let j = 0; j < seasonsArray.length; j++) {
+  //           $('.mask').siblings('h1.archery-season:first').html(seasonsArray[i].name);
+  //           $('.mask').siblings('h1.sep-01-sep-14-oc:first').html(seasonsArray[i].date);
+  // // $('.body').find('.mask_active').siblings('.archery-season').html(seasonsArray[i].name);
+  // // $('.body').find('.mask_active').siblings('.sep-01-sep-14-oc').html(seasonsArray[i].date);
+  //
+  //         // $('.mask').siblings('h1.archery-season:first').html(seasonsArray[i].name);
+  //         // $('.mask').siblings('h1.sep-01-sep-14-oc:first').html(seasonsArray[i].date);
+  //         }
+  //       }
+  //   });
+  // });
