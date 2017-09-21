@@ -455,3 +455,9 @@ z-index: 2;
  width: 960px;
  background-color: #2B2B2B;
 }
+
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
