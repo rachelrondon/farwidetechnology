@@ -92,24 +92,34 @@ $ (document).ready (() => {
   $ ('.sep-01-sep-14-oc').html (seasonsArray[0].date);
 
   $ ('.arrow-forward-material').on ('click', function (event) {
-    console.log (event.target);
-
     const id = event.target.id;
-
     const card = event.target.parentElement.parentElement;
-
     const theSeason = $ (card).find ('.archery-season')[0];
     const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
-
     const newCount = ++dummyData.Search[id].Count;
+    // console.log(newCount)
 
     $ (theSeason).html (seasonsArray[newCount].name);
     $ (theDate).html (seasonsArray[newCount].date);
-  });
+
+    if (newCount === 1) {
+      $('#oval-1').removeClass('oval-white').addClass('oval-grey');
+      $('#oval-2').removeClass('oval-grey').addClass('oval-white');
+    }
+
+    if (newCount === 2) {
+      $('#oval-2').removeClass('oval-white').addClass('oval-grey');
+      $('#oval-3').removeClass('oval-grey').addClass('oval-white');
+    }
+});
+
+
+
+
+
 
   $ ('.arrow-back-material').on ('click', function (event) {
-    console.log (event.target);
-
+    // console.log (event.target);
     const theId = event.target.id;
 
     const card = event.target.parentElement.parentElement;
@@ -118,8 +128,26 @@ $ (document).ready (() => {
     const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
 
     const theNewCount = --dummyData.Search[theId].Count;
+    console.log(theNewCount)
+
+    if (theNewCount === 0) {
+      $('#oval-1').removeClass('oval-grey').addClass('oval-white');
+      $('#oval-2').removeClass('oval-white').addClass('oval-grey');
+    }
+
+    if (theNewCount == 1) {
+      $('#oval-1').removeClass('oval-white').addClass('oval-grey');
+      $('#oval-2').removeClass('oval-grey').addClass('oval-white');
+      $('#oval-3').removeClass('oval-white').addClass('oval-grey');
+    }
+    //
+    // if (theNewCount === 2) {
+    //   $('#oval-2').removeClass('oval-white').addClass('oval-grey');
+    //   $('#oval-3').removeClass('oval-grey').addClass('oval-white');
+    // }
 
     $ (theSeason).html (seasonsArray[theNewCount].name);
     $ (theDate).html (seasonsArray[theNewCount].date);
+
   });
 });
