@@ -92,11 +92,14 @@ $ (document).ready (() => {
   $ ('.sep-01-sep-14-oc').html (seasonsArray[0].date);
 
   $ ('.arrow-forward-material').on ('click', function (event) {
+
     const id = event.target.id;
     const card = event.target.parentElement.parentElement;
     const theSeason = $ (card).find ('.archery-season')[0];
     const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
     const newCount = ++dummyData.Search[id].Count;
+    const maxCount = 3;
+    let increase = true;
     // console.log(newCount)
 
     $ (theSeason).html (seasonsArray[newCount].name);
