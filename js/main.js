@@ -4,7 +4,7 @@ $ (document).ready (() => {
   const moreInfo = $ ('#more-info-modal').html ();
   const modalTemplate = Handlebars.compile (moreInfo);
 
-  const dummyData = {
+  const cardData = {
     Search: [
       {
         State: 'MISSOURI',
@@ -52,7 +52,7 @@ $ (document).ready (() => {
     ],
   };
 
-  const context = modalTemplate (dummyData);
+  const context = modalTemplate (cardData);
   $ ('#info-modal').html (context);
   $ ('#info-modal').css ('visibility', 'visible');
 
@@ -91,58 +91,50 @@ $ (document).ready (() => {
   $ ('.archery-season').html (seasonsArray[0].name);
   $ ('.sep-01-sep-14-oc').html (seasonsArray[0].date);
 
-
-
-/* This is the arrow forward function */
+  /* This is the arrow forward function */
 
   $ ('.arrow-forward-material').on ('click', function (event) {
-
     const id = event.target.id;
     const card = event.target.parentElement.parentElement;
     const theSeason = $ (card).find ('.archery-season')[0];
     const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
-    const newCount = ++dummyData.Search[id].Count;
+    const newCount = ++cardData.Search[id].Count;
 
-    const arrowForward = $(card).find('.arrow-forward-material')[0];
-    const arrowBack = $(card).find('.arrow-back-material')[0];
+    const arrowForward = $ (card).find ('.arrow-forward-material')[0];
+    const arrowBack = $ (card).find ('.arrow-back-material')[0];
 
-    const ovalZero = $(card).find('#oval-0')[0];
-    const ovalOne = $(card).find('#oval-1')[0];
-    const ovalTwo = $(card).find('#oval-2')[0];
+    const ovalZero = $ (card).find ('#oval-0')[0];
+    const ovalOne = $ (card).find ('#oval-1')[0];
+    const ovalTwo = $ (card).find ('#oval-2')[0];
 
-  $(theSeason).html (seasonsArray[newCount].name);
+    $ (theSeason).html (seasonsArray[newCount].name);
 
-      console.log(`The forward count is ${newCount}`)
+    console.log (`The forward count is ${newCount}`);
 
-      $ (theSeason).html (seasonsArray[newCount].name);
-      $ (theDate).html (seasonsArray[newCount].date);
+    $ (theSeason).html (seasonsArray[newCount].name);
+    $ (theDate).html (seasonsArray[newCount].date);
 
+    if (newCount === 0) {
+      $ (arrowForward).removeClass ('disabled');
+    }
 
+    if (newCount === 1) {
+      $ (ovalZero).removeClass ('oval-white').addClass ('oval-grey');
+      $ (ovalOne).removeClass ('oval-grey').addClass ('oval-white');
+      $ (arrowForward).removeClass ('disabled');
+      $ (card).$ ('.arrow-back-material').removeClass ('disabled');
+    }
 
+    if (newCount === 2) {
+      $ (ovalOne).removeClass ('oval-white').addClass ('oval-grey');
+      $ (ovalTwo).removeClass ('oval-grey').addClass ('oval-white');
+      $ (arrowBack).removeClass ('disabled');
+    }
 
-      if (newCount === 0) {
-        $(arrowForward).removeClass('disabled')
-      }
-
-      if (newCount === 1) {
-        $(ovalZero).removeClass('oval-white').addClass('oval-grey');
-        $(ovalOne).removeClass('oval-grey').addClass('oval-white');
-        $(arrowForward).removeClass('disabled')
-        $(card).$('.arrow-back-material').removeClass('disabled')
-      }
-
-      if (newCount === 2) {
-        $(ovalOne).removeClass('oval-white').addClass('oval-grey');
-        $(ovalTwo).removeClass('oval-grey').addClass('oval-white');
-        $(arrowBack).removeClass('disabled')
-      }
-
-      if (newCount === 2) {
-        $(arrowForward).addClass('disabled')
-       }
-
-});
-
+    if (newCount === 2) {
+      $ (arrowForward).addClass ('disabled');
+    }
+  });
 
   $ ('.arrow-back-material').on ('click', function (event) {
     // console.log (event.target);
@@ -150,41 +142,43 @@ $ (document).ready (() => {
 
     const card = event.target.parentElement.parentElement;
 
-    const theSeason = $(card).find('.archery-season')[0];
-    const theDate = $(card).find('.sep-01-sep-14-oc')[0];
+    const theSeason = $ (card).find ('.archery-season')[0];
+    const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
 
-    let theNewCount = --dummyData.Search[theId].Count;
+    let theNewCount = --cardData.Search[theId].Count;
 
-    const arrowForward = $(card).find('.arrow-forward-material')[0];
-    const arrowBack = $(card).find('.arrow-back-material')[0];
+    const arrowForward = $ (card).find ('.arrow-forward-material')[0];
+    const arrowBack = $ (card).find ('.arrow-back-material')[0];
 
-    const ovalZero = $(card).find('#oval-0')[0];
-    const ovalOne = $(card).find('#oval-1')[0];
-    const ovalTwo = $(card).find('#oval-2')[0];
+    const ovalZero = $ (card).find ('#oval-0')[0];
+    const ovalOne = $ (card).find ('#oval-1')[0];
+    const ovalTwo = $ (card).find ('#oval-2')[0];
 
-    if (theNewCount > 1 ) { theNewCount = theMaxCount }
-    if (theNewCount < 0 ) { theNewCount = theMinCount }
+    if (theNewCount > 1) {
+      theNewCount = theMaxCount;
+    }
+    if (theNewCount < 0) {
+      theNewCount = theMinCount;
+    }
 
-    console.log(`The backward count is ${theNewCount}`)
+    console.log (`The backward count is ${theNewCount}`);
 
     if (theNewCount === 0) {
-      $(ovalZero).removeClass('oval-grey').addClass('oval-white');
-      $(ovalOne).removeClass('oval-white').addClass('oval-grey');
-      $(arrowForward).removeClass('disabled')
-      $(arrowBack).addClass('disabled')
-
+      $ (ovalZero).removeClass ('oval-grey').addClass ('oval-white');
+      $ (ovalOne).removeClass ('oval-white').addClass ('oval-grey');
+      $ (arrowForward).removeClass ('disabled');
+      $ (arrowBack).addClass ('disabled');
     }
 
     if (theNewCount == 1) {
-      $(ovalZero).removeClass('oval-white').addClass('oval-grey');
-      $(ovalOne).removeClass('oval-grey').addClass('oval-white');
-      $(ovalTwo).removeClass('oval-white').addClass('oval-grey');
-      $(arrowForward).removeClass('disabled')
-      $(arrowBack).removeClass('disabled')
+      $ (ovalZero).removeClass ('oval-white').addClass ('oval-grey');
+      $ (ovalOne).removeClass ('oval-grey').addClass ('oval-white');
+      $ (ovalTwo).removeClass ('oval-white').addClass ('oval-grey');
+      $ (arrowForward).removeClass ('disabled');
+      $ (arrowBack).removeClass ('disabled');
     }
 
     $ (theSeason).html (seasonsArray[theNewCount].name);
     $ (theDate).html (seasonsArray[theNewCount].date);
-
   });
 });
