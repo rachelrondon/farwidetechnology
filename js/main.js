@@ -91,34 +91,42 @@ $ (document).ready (() => {
   $ ('.archery-season').html (seasonsArray[0].name);
   $ ('.sep-01-sep-14-oc').html (seasonsArray[0].date);
 
+
+
+/* This is the arrow forward function */
+
   $ ('.arrow-forward-material').on ('click', function (event) {
 
     const id = event.target.id;
     const card = event.target.parentElement.parentElement;
     const theSeason = $ (card).find ('.archery-season')[0];
     const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
-    const newCount = ++dummyData.Search[id].Count;
-    const maxCount = 3;
-    let increase = true;
-    // console.log(newCount)
+    let newCount = ++dummyData.Search[id].Count;
+    const maxCount = 2;
+    const minCount = 0;
 
-    $ (theSeason).html (seasonsArray[newCount].name);
-    $ (theDate).html (seasonsArray[newCount].date);
+// 2 is the max count b/c the counter goes 1,2,3
+      if (newCount > 2) { newCount = maxCount }
+      if (newCount < 0) { newCount = minCount }
 
-    if (newCount === 1) {
-      $('#oval-1').removeClass('oval-white').addClass('oval-grey');
-      $('#oval-2').removeClass('oval-grey').addClass('oval-white');
-    }
 
-    if (newCount === 2) {
-      $('#oval-2').removeClass('oval-white').addClass('oval-grey');
-      $('#oval-3').removeClass('oval-grey').addClass('oval-white');
-    }
+      console.log(`The forward count is ${newCount}`)
+
+      $ (theSeason).html (seasonsArray[newCount].name);
+      $ (theDate).html (seasonsArray[newCount].date);
+
+      if (newCount === 1) {
+        $('#oval-0').removeClass('oval-white').addClass('oval-grey');
+        $('#oval-1').removeClass('oval-grey').addClass('oval-white');
+      }
+
+      if (newCount === 2) {
+        $('#oval-1').removeClass('oval-white').addClass('oval-grey');
+        $('#oval-2').removeClass('oval-grey').addClass('oval-white');
+      }
+
+
 });
-
-
-
-
 
 
   $ ('.arrow-back-material').on ('click', function (event) {
@@ -127,24 +135,33 @@ $ (document).ready (() => {
 
     const card = event.target.parentElement.parentElement;
 
-    const theSeason = $ (card).find ('.archery-season')[0];
-    const theDate = $ (card).find ('.sep-01-sep-14-oc')[0];
+    const theSeason = $(card).find('.archery-season')[0];
+    const theDate = $(card).find('.sep-01-sep-14-oc')[0];
 
-    const theNewCount = --dummyData.Search[theId].Count;
-    console.log(theNewCount)
+    let theNewCount = --dummyData.Search[theId].Count;
+
+    const theMaxCount = 1
+    const theMinCount = 0
+
+    if (theNewCount > 1 ) { theNewCount = theMaxCount }
+    if (theNewCount < 0 ) { theNewCount = theMinCount }
+
+    console.log(`The backward count is ${theNewCount}`)
 
     if (theNewCount === 0) {
+      $('#oval-0').removeClass('oval-grey').addClass('oval-white');
+      $('#oval-1').removeClass('oval-white').addClass('oval-grey');
+    }
+
+    if (theNewCount == 1) {
+      $('#oval-0').removeClass('oval-white').addClass('oval-grey');
       $('#oval-1').removeClass('oval-grey').addClass('oval-white');
       $('#oval-2').removeClass('oval-white').addClass('oval-grey');
     }
 
-    if (theNewCount == 1) {
-      $('#oval-1').removeClass('oval-white').addClass('oval-grey');
-      $('#oval-2').removeClass('oval-grey').addClass('oval-white');
-      $('#oval-3').removeClass('oval-white').addClass('oval-grey');
-    }
-    //
-    // if (theNewCount === 2) {
+
+    // if (theNewCount == 2) {
+    //   $('#oval-1').removeClass('oval-white').addClass('oval-grey');
     //   $('#oval-2').removeClass('oval-white').addClass('oval-grey');
     //   $('#oval-3').removeClass('oval-grey').addClass('oval-white');
     // }
