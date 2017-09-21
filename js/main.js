@@ -110,22 +110,7 @@ $ (document).ready (() => {
     const ovalOne = $(card).find('#oval-1')[0];
     const ovalTwo = $(card).find('#oval-2')[0];
 
-
-  // const theOval = $(card).find('.the-oval')[0];
-    // const updateOval = dummyData.Search[id]
-
-    // console.log(updateOval)
-    // console.log(card)
-
-    // console.log(event.target)
-
-// the season is the card that you are on
-// change the html of the card that you are on to represent the new count
   $(theSeason).html (seasonsArray[newCount].name);
-
-
-
-
 
       console.log(`The forward count is ${newCount}`)
 
@@ -137,8 +122,6 @@ $ (document).ready (() => {
 
       if (newCount === 0) {
         $(arrowForward).removeClass('disabled')
-
-        // $('.arrow-forward-material').removeClass('disabled')
       }
 
       if (newCount === 1) {
@@ -146,17 +129,9 @@ $ (document).ready (() => {
         $(ovalOne).removeClass('oval-grey').addClass('oval-white');
         $(arrowForward).removeClass('disabled')
         $(card).$('.arrow-back-material').removeClass('disabled')
-        //
-        // $('#oval-0').removeClass('oval-white').addClass('oval-grey');
-        // $('#oval-1').removeClass('oval-grey').addClass('oval-white');
-        // $('.arrow-forward-material').removeClass('disabled')
-        // $('.arrow-back-material').removeClass('disabled')
       }
 
       if (newCount === 2) {
-        // $('#oval-1').removeClass('oval-white').addClass('oval-grey');
-        // $('#oval-2').removeClass('oval-grey').addClass('oval-white');
-        // $('.arrow-back-material').removeClass('disabled')
         $(ovalOne).removeClass('oval-white').addClass('oval-grey');
         $(ovalTwo).removeClass('oval-grey').addClass('oval-white');
         $(arrowBack).removeClass('disabled')
@@ -164,7 +139,6 @@ $ (document).ready (() => {
 
       if (newCount === 2) {
         $(arrowForward).addClass('disabled')
-        // $('.arrow-forward-material').addClass('disabled')
        }
 
 });
@@ -188,20 +162,12 @@ $ (document).ready (() => {
     const ovalOne = $(card).find('#oval-1')[0];
     const ovalTwo = $(card).find('#oval-2')[0];
 
-
-    // const theMaxCount = 1
-    // const theMinCount = 0
-
     if (theNewCount > 1 ) { theNewCount = theMaxCount }
     if (theNewCount < 0 ) { theNewCount = theMinCount }
 
     console.log(`The backward count is ${theNewCount}`)
 
     if (theNewCount === 0) {
-      // $('#oval-0').removeClass('oval-grey').addClass('oval-white');
-      // $('#oval-1').removeClass('oval-white').addClass('oval-grey');
-      // $('.arrow-forward-material').removeClass('disabled')
-      // $('.arrow-back-material').addClass('disabled')
       $(ovalZero).removeClass('oval-grey').addClass('oval-white');
       $(ovalOne).removeClass('oval-white').addClass('oval-grey');
       $(arrowForward).removeClass('disabled')
