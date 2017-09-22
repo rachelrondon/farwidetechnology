@@ -69,7 +69,11 @@ $ (document).ready (() => {
 
   /* dropdown menu */
   $ ('.dropdown-toggle').click (function () {
-    $ (this).next ('.dropdown').toggle ();
+    $ (this).next ('.dropdown').slideToggle ();
+  });
+
+  $ ('.dropdown-slideup').click (function() {
+    $('.dropdown').slideUp();
   });
 
   /* Seasons click-through */
@@ -192,7 +196,7 @@ $ (document).ready (() => {
       $ (ovalOne).removeClass ('oval-grey').addClass ('oval-white');
       $ (ovalTwo).removeClass ('oval-white').addClass ('oval-grey');
       $ (arrowForward).removeClass ('disabled');
-      
+
       $(arrowBack).removeClass ('disabled');
       $(arrowBack).addClass('enabled');
       $(arrowBack).attr('src', './Assets/arrow_forward.svg');
