@@ -28,6 +28,7 @@ body {
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
+  border-color: #4C4C4C;
 }
 
 .rectangle-dropdown {
@@ -52,6 +53,7 @@ body {
   margin-top: 10px;
   white-space: nowrap;
   z-index: 3;
+  border-color: #4C4C4C;
 }
 
 ul {
@@ -87,7 +89,7 @@ margin: 0;
   position: absolute;
   box-sizing: border-box;
   height: 1px;
-  width: 300px;
+  width: 302px;
   border-width: 1px;
   border-style: solid;
   border-color: #4C4C4C;
@@ -164,6 +166,7 @@ margin: 0;
   padding-left: 60.5px;
   padding-right: 59.5px;
   margin-top: 5px;
+  font-weight: lighter;
 }
 .oval-white {
   background-color: #FFFFFF;
@@ -420,7 +423,7 @@ z-index: 2;
 }
 
 #grey-space {
- height: 1154px;
+ height: 1154px;
  width: 960px;
  background-color: #2B2B2B;
 }
