@@ -69,11 +69,12 @@ $ (document).ready (() => {
 
   /* dropdown menu */
   $ ('.dropdown-toggle').click (function () {
-    $ (this).next ('.dropdown').slideToggle ();
+    $ (this).next ('.dropdown').toggle();
   });
 
   $ ('.dropdown-slideup').click (function() {
-    $('.dropdown').slideUp();
+    $('.dropdown').toggle();
+
   });
 
   /* Seasons click-through */
