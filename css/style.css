@@ -301,6 +301,16 @@ margin: 0;
 	width: 8.02px;
 }
 
+/*.arrow-back-enabled {
+  display: none;
+  position: absolute;
+  margin-top: 25.06px;
+  margin-left: 19.99px;
+	height: 8.02px;
+	width: 8.02px;
+  -webkit-transform: rotate(180deg)
+}*/
+
 .arrow-forward-material {
   position: absolute;
   height: 8.02px;
@@ -460,4 +470,13 @@ z-index: 2;
 .disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.enabled {
+  position: absolute;
+  margin-top: 25.06px;
+  margin-left: 19.99px;
+  height: 8.02px;
+  width: 8.02px;
+  -webkit-transform: rotate(180deg)
 }

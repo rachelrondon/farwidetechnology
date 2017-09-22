@@ -102,6 +102,7 @@ $ (document).ready (() => {
 
     const arrowForward = $ (card).find ('.arrow-forward-material')[0];
     const arrowBack = $ (card).find ('.arrow-back-material')[0];
+    const arrowEnabled = $(card).find('.arrow-back-enabled')[0];
 
     const ovalZero = $ (card).find ('#oval-0')[0];
     const ovalOne = $ (card).find ('#oval-1')[0];
@@ -116,19 +117,29 @@ $ (document).ready (() => {
 
     if (newCount === 0) {
       $ (arrowForward).removeClass ('disabled');
+        $(arrowEnabled).css('display', 'none')
     }
 
     if (newCount === 1) {
       $ (ovalZero).removeClass ('oval-white').addClass ('oval-grey');
       $ (ovalOne).removeClass ('oval-grey').addClass ('oval-white');
       $ (arrowForward).removeClass ('disabled');
-      $ (card).$ ('.arrow-back-material').removeClass ('disabled');
+      $(arrowEnabled).css('display', 'block')
+
+      $(arrowBack).removeClass ('disabled');
+      $(arrowBack).addClass('enabled');
+      $(arrowBack).attr('src', './Assets/arrow_forward.svg');
     }
 
     if (newCount === 2) {
       $ (ovalOne).removeClass ('oval-white').addClass ('oval-grey');
       $ (ovalTwo).removeClass ('oval-grey').addClass ('oval-white');
       $ (arrowBack).removeClass ('disabled');
+      $(arrowEnabled).css('display', 'block')
+
+      $(arrowBack).removeClass ('disabled');
+      $(arrowBack).addClass('enabled');
+      $(arrowBack).attr('src', './Assets/arrow_forward.svg');
     }
 
     if (newCount === 2) {
@@ -149,6 +160,7 @@ $ (document).ready (() => {
 
     const arrowForward = $ (card).find ('.arrow-forward-material')[0];
     const arrowBack = $ (card).find ('.arrow-back-material')[0];
+    const arrowEnabled = $(card).find('.arrow-back-enabled')[0];
 
     const ovalZero = $ (card).find ('#oval-0')[0];
     const ovalOne = $ (card).find ('#oval-1')[0];
@@ -166,8 +178,13 @@ $ (document).ready (() => {
     if (theNewCount === 0) {
       $ (ovalZero).removeClass ('oval-grey').addClass ('oval-white');
       $ (ovalOne).removeClass ('oval-white').addClass ('oval-grey');
+
       $ (arrowForward).removeClass ('disabled');
-      $ (arrowBack).addClass ('disabled');
+      $ (arrowBack).removeClass('enabled');
+
+      $ (arrowBack).addClass('disabled');
+      $ (arrowBack).removeAttr('src', './Assets/arrow_forward.svg');
+      $ (arrowBack).attr('src','Assets/arrow_back.svg')
     }
 
     if (theNewCount == 1) {
@@ -175,7 +192,10 @@ $ (document).ready (() => {
       $ (ovalOne).removeClass ('oval-grey').addClass ('oval-white');
       $ (ovalTwo).removeClass ('oval-white').addClass ('oval-grey');
       $ (arrowForward).removeClass ('disabled');
-      $ (arrowBack).removeClass ('disabled');
+      
+      $(arrowBack).removeClass ('disabled');
+      $(arrowBack).addClass('enabled');
+      $(arrowBack).attr('src', './Assets/arrow_forward.svg');
     }
 
     $ (theSeason).html (seasonsArray[theNewCount].name);
