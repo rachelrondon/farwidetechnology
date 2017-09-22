@@ -260,7 +260,7 @@ margin: 0;
 }
 
 .main-icons {
-  z-index: 1;
+  /*z-index: 1;*/
   display: flex;
   flex-direction: column;
   margin-top: auto;
@@ -270,7 +270,7 @@ margin: 0;
   margin-top: 28px;
   margin-left: 26px;
   height: 70px;
-  width: 140px;
+  width: 139px;
   z-index:2;
 }
 

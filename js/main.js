@@ -81,7 +81,7 @@ $ (document).ready (() => {
   let seasonsArray = [
     {
       name: 'Archery Season',
-      date: 'Sep 01 - Sep 14   |   Oct 02 - Nov 16 ',
+      date: 'Sep 01 - Sep 14   |   Oct 02 - Nov 16',
     },
     {
       name: 'Early Youth Portion',
