@@ -369,6 +369,7 @@ a {
   margin-bottom: 13px;
   margin-right: 153px;
   z-index: 2;
+  font-weight: lighter;
 }
 
 #dropdown-options {
@@ -383,6 +384,7 @@ a {
   margin-bottom: 13px;
   background-color: #2B2B2B;
   margin-left: 18px;
+  font-weight: lighter;
 }
 
 .dropdown-menu {
