@@ -5,10 +5,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Rachel Rondon</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css" />
-
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/handlebars-v4.0.5.js"></script>
   <script type="text/javascript" src="http://underscorejs.org/underscore-min.js"></script>
@@ -18,65 +16,65 @@
 
 <body class="body">
   <div id="main-div">
-  <div id="grey-space"></div>
-  <div id="info-modal">
-    <script id="more-info-modal" type="text/x-handlebars-template">
-      <div class="rectangle-2">
-        <div class="showing-117-results">Showing 117 Results</div>
-        <div class="rectangle-6">
-          <button class="dropdown-toggle" id="area-size-ascending">Area Size (Ascending)<img id="arrow-down" src="Assets/icon/arrow-down.greyMedium.svg"></img></button>
-          <ul class="dropdown">
-            <div class="dropdown-item">
-              <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Area Size (Ascending)<img id="arrow-up" src="Assets/icon/arrow-down.greyMedium.svg"></img></button></li>
-            </div>
-            <div class="path-dropdown"></div>
-            <div class="dropdown-item">
-              <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Area Size (Descending)</button></li>
-            </div>
-            <div class="path-dropdown"></div>
-            <div class="dropdown-item">
-              <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Area Name (A to Z)</button></li>
-            </div>
-            <div class="path-dropdown"></div>
-            <div class="dropdown-item">
-              <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Season (Soonest First)</button></li>
-            </div>
-          </ul>
-        </div>
-
-        {{#each Search}}
-        <div id="mask-div" class="mask">
-
-          <div id="card-top">
-            <div id="card-top-content">
-              <h1 class="missouri-hunting">{{State}} • {{Type}}</h1>
-              <h1 class="fall-creek">{{County}}</h1>
-              <h1 class="deer">{{Animal}}</h1>
-            </div>
-            <div class="main-icons">
-              <img class="page-1-copy-2" src="Assets/icon/icon-favorite-unselected.svg"></img>
-              <img id="icon-green" src="Assets/FW_2.2_Icon_Green 2.svg"></img>
-            </div>
+    <div id="grey-space"></div>
+    <div id="info-modal">
+      <script id="more-info-modal" type="text/x-handlebars-template">
+        <div class="rectangle-2">
+          <div class="showing-117-results">Showing 117 Results</div>
+          <div class="rectangle-6">
+            <button class="dropdown-toggle" id="area-size-ascending">Area Size (Ascending)<img id="arrow-down" src="Assets/icon/arrow-down.greyMedium.svg"></img></button>
+            <ul class="dropdown">
+              <div class="dropdown-item">
+                <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Area Size (Ascending)<img id="arrow-up" src="Assets/icon/arrow-down.greyMedium.svg"></img></button></li>
+              </div>
+              <div class="path-dropdown"></div>
+              <div class="dropdown-item">
+                <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Area Size (Descending)</button></li>
+              </div>
+              <div class="path-dropdown"></div>
+              <div class="dropdown-item">
+                <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Area Name (A to Z)</button></li>
+              </div>
+              <div class="path-dropdown"></div>
+              <div class="dropdown-item">
+                <li class="dropdown-li"><button class="dropdown-slideup" id="dropdown-options" href="">Season (Soonest First)</button></li>
+              </div>
+            </ul>
           </div>
-          <div class="path-16"></div>
+
+          {{#each Search}}
+          <div id="mask-div" class="mask">
+
+            <div id="card-top">
+              <div id="card-top-content">
+                <h1 class="missouri-hunting">{{State}} • {{Type}}</h1>
+                <h1 class="fall-creek">{{County}}</h1>
+                <h1 class="deer">{{Animal}}</h1>
+              </div>
+              <div class="main-icons">
+                <img class="page-1-copy-2" src="Assets/icon/icon-favorite-unselected.svg"></img>
+                <img id="icon-green" src="Assets/FW_2.2_Icon_Green 2.svg"></img>
+              </div>
+            </div>
+            <div class="path-16"></div>
             <a href="#"><img id={{@index}} class="arrow-back-material" src="Assets/arrow_back.svg"></img></a>
             <a href="#"><img id={{@index}} class="arrow-forward-material" src="Assets/arrow_forward.svg"></img></a>
             <h1 class="archery-season"></h1>
-            <h1 class="sep-01-sep-14-oc"></h1>
+            <h1 class="dates"></h1>
             <div id="ovals">
-              <div  class="oval-white" id="oval-0"></div>
+              <div class="oval-white" id="oval-0"></div>
               <div class="oval-grey" id="oval-1"></div>
               <div class="oval-grey" id="oval-2"></div>
               <div class="oval-grey" id="oval-3"></div>
               <div class="oval-grey" id="oval-4"></div>
               <div class="oval-grey" id="oval-5"></div>
             </div>
+          </div>
+          {{/each}}
         </div>
-        {{/each}}
-      </div>
-    </script>
+      </script>
+    </div>
   </div>
-</div>
 </body>
 
 </html>
