@@ -89,7 +89,7 @@ margin: 0;
   position: absolute;
   box-sizing: border-box;
   height: 1px;
-  width: 302px;
+  width: 300px;
   border-width: 1px;
   border-style: solid;
   border-color: #4C4C4C;
@@ -332,7 +332,7 @@ margin: 0;
   z-index: 4;
   margin-top: auto;
   border-radius: 4px;
-  border-width: 2px;
+  border-width: 4px;
   border-color: #2B2B2B;
 }
 
