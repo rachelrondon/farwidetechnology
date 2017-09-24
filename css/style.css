@@ -446,7 +446,7 @@ z-index: 2;
 
 .enabled {
   position: absolute;
-  margin-top: 15.06px;
+  /*margin-top: 15.06px;*/
   margin-left: 19.99px;
   height: 8.02px;
   width: 8.02px;
